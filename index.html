@@ -5,9 +5,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Яндекс.Дом</title>
+    <style>
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+    </style>
+    <style>
+        .footer,
+        body {
+            display: flex
+        }
+
+        html {
+            font-size: 100%;
+            font-family: Arial, sans-serif;
+            line-height: 1.25
+        }
+
+        body {
+            flex-direction: column;
+            font-family: inherit;
+            line-height: inherit;
+            margin: 0
+        }
+
+        body,
+        html {
+            height: 100%
+        }
+
+        .footer {
+            flex: 0 0 auto;
+            align-items: center;
+            height: 4rem;
+            margin-top: auto;
+            padding: 0 2.5rem
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+    <link href="mobile-styles.css" rel="stylesheet" media="(max-width: 768px)">
+    <link href="tablet-styles.css" rel="stylesheet" media="(max-width: 1024px)">
 </head>
 
 <body>
+
     <header class="header">
         <a href="/" class="header__logo" aria-label="Яндекс.Дом"></a>
         <button class="header__menu" aria-expanded="false">
@@ -310,4 +459,5 @@
         </div>
     </footer>
 </body>
+
 </html>

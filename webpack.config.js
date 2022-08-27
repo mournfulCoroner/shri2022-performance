@@ -10,10 +10,10 @@ module.exports = {
     entry: [
         "./tabsScript.js",
         "./menuScript.js",
+        "./reset.css",
         "./styles.css",
         "./mobile-styles.css",
         "./tablet-styles.css",
-        "./reset.css"
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
