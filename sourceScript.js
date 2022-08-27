@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-	makeTabs(document.querySelectorAll('.main__devices'))
-	makeMenu(document.querySelectorAll('.header__menu'))
+	makeTabs()
+	makeMenu()
 });
 
-function makeTabs(node) {
+function makeTabs() {
+	const node = document.querySelector('.main__devices')
 	let selected = node.querySelector('.section__tab_active').dataset.id;
 	const tabs = node.querySelectorAll('.section__tab');
 	const list = Array.from(tabs).map(node => node.dataset.id);
@@ -42,7 +43,7 @@ function makeTabs(node) {
 	for (let tab of tabs) {
 		tab.addEventListener('click', event => {
 			const newId = event.target.dataset.id;
-			selectTab(node, select, newId)
+			selectTab(newId)
 		})
 		tab.addEventListener('keydown', event => {
 			if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
@@ -78,7 +79,8 @@ function makeTabs(node) {
 	}
 }
 
-function makeMenu(node) {
+function makeMenu() {
+	const node = document.querySelector('.header__menu');
 	let expanded = false;
 	const links = document.querySelector('.header__links');
 
