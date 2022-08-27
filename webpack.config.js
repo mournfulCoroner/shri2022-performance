@@ -8,12 +8,11 @@ const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 module.exports = {
     mode: 'production',
     entry: [
-        "./tabsScript.js",
-        "./menuScript.js",
         "./reset.css",
         "./styles.css",
         "./mobile-styles.css",
         "./tablet-styles.css",
+        "./sourceScript.js",
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -40,12 +39,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html"
+            template: "./clear.html"
         }),
         new MiniCssExtractPlugin(),
         new HtmlCriticalWebpackPlugin({
             base: path.resolve(__dirname, 'dist'),
-            src: './index.html',
+            src: 'index.html',
             dest: 'index.html',
             inline: true,
             minify: true,
