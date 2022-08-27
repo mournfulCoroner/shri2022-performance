@@ -5,19 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Яндекс.Дом</title>
-    <style>
-        a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}
-    </style>
-    <style>
-        .footer,body{display:flex}html{font-size:100%;font-family:Arial,sans-serif;line-height:1.25}body{flex-direction:column;font-family:inherit;line-height:inherit;margin:0}body,html{height:100%}.footer{flex:0 0 auto;align-items:center;height:4rem;margin-top:auto;padding:0 2.5rem}
-    </style>
-    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
-    <link href="mobile-styles.css" rel="stylesheet" media="(max-width: 768px)">
-    <link href="tablet-styles.css" rel="stylesheet" media="(max-width: 1024px)">
 </head>
 
 <body>
-
     <header class="header">
         <a href="/" class="header__logo" aria-label="Яндекс.Дом"></a>
         <button class="header__menu" aria-expanded="false">
@@ -319,12 +309,5 @@
             © 1997–2022 ООО «Яндекс»
         </div>
     </footer>
-    <!-- <script defer src="tabsScript.min.js"></script>
-    <script defer src="menuScript.min.js"></script> -->
-    <script>
-        function selectTab(a, g, c) { let b = a.querySelector(`.section__tab[data-id=${c}]`), e = a.querySelector(`.section__panel[data-id=${c}]`), d = a.querySelector(".section__tab_active"), f = a.querySelector(".section__panel:not(.section__panel_hidden)"); d.classList.remove("section__tab_active"), d.setAttribute("aria-selected", "false"), d.removeAttribute("tabindex"), b.classList.add("section__tab_active"), b.setAttribute("aria-selected", "true"), b.setAttribute("tabindex", "0"), b.focus({ preventScroll: !0 }), f.classList.add("section__panel_hidden"), f.setAttribute("aria-hidden", "true"), e.classList.remove("section__panel_hidden"), e.setAttribute("aria-hidden", "false"), g.value = c } function makeTabs() { let a = document.querySelector(".main__devices"), e = a.querySelector(".section__tab_active").dataset.id, b = a.querySelectorAll(".section__tab"), f = Array.from(b).map(a => a.dataset.id), d = a.querySelector(".section__select"); for (let c of (d.addEventListener("input", () => { selectTab(a, d, d.value) }), b)) c.addEventListener("click", b => { let c = b.target.dataset.id; selectTab(a, d, c) }), c.addEventListener("keydown", c => { if (c.ctrlKey || c.metaKey || c.shiftKey || c.altKey) return; let b = f.indexOf(e); switch (c.which) { case 37: --b; break; case 39: ++b; break; case 36: b = 0; break; case 35: b = f.length - 1; break; default: return }b >= f.length ? b = 0 : b < 0 && (b = f.length - 1), selectTab(a, d, f[b]), c.preventDefault() }) } document.addEventListener("DOMContentLoaded", () => { makeTabs() })
-        document.addEventListener("DOMContentLoaded", () => { makeMenu() }); function makeMenu() { let a = document.querySelector(".header"), b = a.children[1], c = !1, d = a.children[2]; b.addEventListener("click", () => { c = !c, b.setAttribute("aria-expanded", String(c)), b.children[0].textContent = c ? "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E" : "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E", d.classList.toggle("header__links_opened", c), d.classList.add("header__links-toggled") }) }
-    </script>
 </body>
-
 </html>
